@@ -1,0 +1,58 @@
+.fr-linkButton {
+  border: 1px solid var(--color-black900);
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  line-height: 48px;
+  padding-right: var(--sp-h-1g);
+  padding-left: var(--sp-h-1g);
+  text-align: center;
+
+  &.-black {
+    background-color: var(--color-black900);
+    color: var(--color-white);
+  }
+
+  &.-white {
+    background-color: var(--color-white);
+  }
+
+  & + & {
+    margin-top: var(--sp-v-m);
+  }
+
+  @media screen and (--pc-viewpoint) {
+    font-size: 17px;
+    line-height: 48px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+
+    &.-s {
+      max-width: 276px;
+    }
+
+    &.-m {
+      max-width: 376px;
+    }
+
+    &.-l {
+      max-width: 576px;
+    }
+
+    & + & {
+      margin-top: var(--pc-v-m);
+    }
+
+    &Parent.-horizontal {
+      display: flex;
+    }
+
+    &Parent.-horizontal & + & {
+      margin-top: 0;
+      margin-left: calc(var(--pc-v-s) * 2);
+    }
+  }
+}

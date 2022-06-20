@@ -1,0 +1,23 @@
+-
+  var breadcrumbsJson = (breadcrumbs) => {
+    var json = []
+
+    for (let i = 0; breadcrumbs.length > i; i++) {
+      json.push({
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
+          "@id": breadcrumbs[i].href,
+          "name": breadcrumbs[i].text
+        }
+      })
+    }
+
+    return {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": json
+    }
+  }
+
+script(type="application/ld+json")!=JSON.stringify(breadcrumbsJson(data.breadcrumbs))

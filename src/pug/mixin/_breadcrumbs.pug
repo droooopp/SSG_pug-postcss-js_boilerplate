@@ -1,0 +1,14 @@
+mixin breadcrumbs(device)
+  .fr-breadcrumbs(class=device === "pc" ? "u-only-pc" : "fr-sp-mt-xxxl u-only-sp")
+    ol.fr-breadcrumbs_inner
+      each breadcrumb, index in data.breadcrumbs
+        if data.breadcrumbs.length == index + 1
+          li.fr-breadcrumbs_item #{breadcrumb.text}
+        else
+          li.fr-breadcrumbs_item
+            a.fr-breadcrumbs_itemLink(
+              class=data.select_template === "indexCorp" ? "js-trackEventCorp" : "js-trackEvent"
+              href=breadcrumb.href,
+              data-category="Click",
+              data-label=`${data.dataLabelPrefix}-breadcrumb-${index + 1}`
+            ) #{breadcrumb.text}

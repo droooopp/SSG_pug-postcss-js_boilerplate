@@ -1,0 +1,21 @@
+:root {
+  @each $key, $value in (red, teal, yellow, black900, white, gray500, gray350, gray150, gray050, men, kids, baby, boys, girls), (#f00, #378694, #ebbe00, #1b1b1b, #fff, #7d7d7d, #ababab, #dadada, #f4f4f4, #000082, #50B4F0, #96C800, #0091d7, #eb64a5) {
+    --color-$(key): $(value);
+  }
+
+  @each $key, $value in (xxs, xs, s, m, l, xl, xxl, xxxl), (3, 6, 9, 15, 21, 24, 36, 60) {
+    --sp-v-$(key): $(value)px;
+  }
+
+  @each $key, $value in (xxs, xs, s, m, l, xl, xxl, xxxl), (4, 8, 12, 20, 28, 40, 52, 64) {
+    --pc-v-$(key): $(value)px;
+  }
+
+  @each $key, $value in (xxs, 05g, 1g, 2g), (1px, 2vw, 4vw, 8vw) {
+    --sp-h-$(key): $(value);
+  }
+
+  @each $key, $value in (s, m, l, xl), (12, 24, 80, 160) {
+    --pc-h-$(key): $(value)px;
+  }
+}

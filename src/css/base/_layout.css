@@ -1,0 +1,11 @@
+.main_inner {
+  min-width: 320px;
+
+  @media screen and (--pc-viewpoint) {
+    max-width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}

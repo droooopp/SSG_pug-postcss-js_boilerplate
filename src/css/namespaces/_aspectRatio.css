@@ -1,0 +1,17 @@
+@each $key, $value in (1:1, 2:1, 3:1, 3:4, 4:3, 16:9), (100, 50, 33.3333, 133.3333, 75, 56.25) {
+  [data-aspect-ratio="$(key)"]::before {
+    padding-top: $(value)%;
+  }
+
+  @media screen and (--sp-viewpoint) {
+    [data-sp-aspect-ratio="$(key)"]::before {
+      padding-top: $(value)%;
+    }
+  }
+
+  @media screen and (--pc-viewpoint) {
+    [data-pc-aspect-ratio="$(key)"]::before {
+      padding-top: $(value)%;
+    }
+  }
+}

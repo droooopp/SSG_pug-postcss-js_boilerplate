@@ -1,0 +1,21 @@
+body {
+  background-color: var(--color-white);
+  color: var(--color-black900);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  @media screen and (--pc-viewpoint) {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: var(--color-black900);
+}
+
+@media screen and (--pc-viewpoint) {
+  .wrapper {
+    background-color: var(--color-white);
+  }
+}

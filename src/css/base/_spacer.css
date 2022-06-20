@@ -1,0 +1,171 @@
+.fr {
+  @each $key, $value in (xxs, xs, s, m, l, xl, xxl, xxxl), (--sp-v-xxs, --sp-v-xs, --sp-v-s, --sp-v-m, --sp-v-l, --sp-v-xl, --sp-v-xxl, --sp-v-xxxl) {
+    &-sp-pt-$(key) {
+      padding-top: var($(value));
+    }
+
+    &-sp-pb-$(key) {
+      padding-bottom: var($(value));
+    }
+
+    &-sp-py-$(key) {
+      padding-top: var($(value));
+      padding-bottom: var($(value));
+    }
+
+    &-sp-mt-$(key) {
+      margin-top: var($(value));
+    }
+
+    &-sp-mb-$(key) {
+      margin-bottom: var($(value));
+    }
+
+    &-sp-my-$(key) {
+      margin-top: var($(value));
+      margin-bottom: var($(value));
+    }
+  }
+
+  @each $key, $value in (xxs, 05g, 1g, 2g), (--sp-h-xxs, --sp-h-05g, --sp-h-1g, --sp-h-2g) {
+    &-sp-pr-$(key) {
+      padding-right: var($(value));
+    }
+
+    &-sp-pl-$(key) {
+      padding-left: var($(value));
+    }
+
+    &-sp-px-$(key) {
+      padding-right: var($(value));
+      padding-left: var($(value));
+    }
+
+    &-sp-mr-$(key) {
+      margin-right: var($(value));
+    }
+
+    &-sp-ml-$(key) {
+      margin-left: var($(value));
+    }
+
+    &-sp-mx-$(key) {
+      margin-right: var($(value));
+      margin-left: var($(value));
+    }
+  }
+
+  @media screen and (--pc-viewpoint) {
+    @each $key in (xxs, xs, s, m, l, xl, xxl, xxxl) {
+      &-sp-pt-$(key) {
+        padding-top: 0;
+      }
+
+      &-sp-pb-$(key) {
+        padding-bottom: 0;
+      }
+
+      &-sp-py-$(key) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      &-sp-mt-$(key) {
+        margin-top: 0;
+      }
+
+      &-sp-mb-$(key) {
+        margin-bottom: 0;
+      }
+
+      &-sp-my-$(key) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    @each $key in (xxs, 05g, 1g, 2g) {
+      &-sp-pr-$(key) {
+        padding-right: 0;
+      }
+
+      &-sp-pl-$(key) {
+        padding-left: 0;
+      }
+
+      &-sp-px-$(key) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      &-sp-mr-$(key) {
+        margin-right: 0;
+      }
+
+      &-sp-ml-$(key) {
+        margin-left: 0;
+      }
+
+      &-sp-mx-$(key) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    @each $key, $value in (xxs, xs, s, m, l, xl, xxl, xxxl), (--pc-v-xxs, --pc-v-xs, --pc-v-s, --pc-v-m, --pc-v-l, --pc-v-xl, --pc-v-xxl, --pc-v-xxxl) {
+      &-pc-pt-$(key) {
+        padding-top: var($(value));
+      }
+
+      &-pc-pb-$(key) {
+        padding-bottom: var($(value));
+      }
+
+      &-pc-py-$(key) {
+        padding-top: var($(value));
+        padding-bottom: var($(value));
+      }
+
+      &-pc-mt-$(key) {
+        margin-top: var($(value));
+      }
+
+      &-pc-mb-$(key) {
+        margin-bottom: var($(value));
+      }
+
+      &-pc-my-$(key) {
+        margin-top: var($(value));
+        margin-bottom: var($(value));
+      }
+    }
+
+    @each $key, $value in (s, m, l, xl), (--pc-h-s, --pc-h-m, --pc-h-l, --pc-h-xl) {
+      &-pc-pr-$(key) {
+        padding-right: var($(value));
+      }
+
+      &-pc-pl-$(key) {
+        padding-left: var($(value));
+      }
+
+      &-pc-px-$(key) {
+        padding-right: var($(value));
+        padding-left: var($(value));
+      }
+
+      &-pc-mr-$(key) {
+        margin-right: var($(value));
+      }
+
+      &-pc-ml-$(key) {
+        margin-left: var($(value));
+      }
+
+      &-pc-mx-$(key) {
+        margin-right: var($(value));
+        margin-left: var($(value));
+      }
+    }
+  }
+}

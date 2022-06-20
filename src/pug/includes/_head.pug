@@ -1,0 +1,29 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="format-detection", content="telephone=no")
+
+title #{data.title}
+
+meta(name="description", content=data.description)
+meta(name="keywords", content=data.keywords)
+meta(name="apple-mobile-web-app-title", content=data.og.site_name)
+
+meta(property="fb:app_id", content=data.og.id)
+meta(property="og:type", content=data.og.type)
+meta(property="og:site_name", content=data.og.site_name)
+meta(property="og:title", content=data.title)
+meta(property="og:description", content=data.description)
+meta(property="og:url", content=data.url)
+meta(property="og:image", content=data.og.image)
+
+link(rel="preconnect", href="https://www.googletagmanager.com/", crossorigin)
+link(rel="preconnect", href="https://www.google-analytics.com", crossorigin)
+link(rel="preconnect", href="https://googleads.g.doubleclick.net", crossorigin)
+link(rel="preconnect", href="https://www.google.co.jp", crossorigin)
+link(rel="preconnect", href="https://www.google.com/", crossorigin)
+
+link(rel="canonical", href=data.url)
+
+link(rel="stylesheet", href="/SSG_pug-postcss-js_boilerplate/feature/css/@1.0.0/app.css", media="all")
+script(src="/SSG_pug-postcss-js_boilerplate/feature/js/@1.0.0/app.js", defer)

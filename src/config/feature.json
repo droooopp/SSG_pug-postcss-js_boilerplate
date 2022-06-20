@@ -1,0 +1,39 @@
+{
+  "select_template": "index",
+  "dist": "SSG_pug-postcss-js_boilerplate/feature/",
+  "url": "https://www.domain.com/SSG_pug-postcss-js_boilerplate/feature/",
+  "file_name": "index",
+  "lang": "ja",
+  "title": "タイトル",
+  "description": "タイトル|description",
+  "keywords": "タイトル,通販",
+  "og": {
+    "id": "111111111111111",
+    "type": "website",
+    "site_name": "タイトルオンラインストア",
+    "image": "#######"
+  },
+  "domain": "https://www.domain.com/",
+  "domainJp": "https://www.domain.com/jp/",
+  "path": "/SSG_pug-postcss-js_boilerplate/feature/",
+  "pathCurrent": "/SSG_pug-postcss-js_boilerplate/feature/",
+  "imgPath": "/SSG_pug-postcss-js_boilerplate/feature/img/",
+  "lazyInitialImg": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "breakpoint" : 813,
+  "gender": "men",
+  "dataLabelPrefix": "m",
+  "breadcrumbs": [
+    {
+      "href": "https://www.domain.com/",
+      "text": "HOME"
+    },
+    {
+      "href": "https://www.domain.com/SSG_pug-postcss-js_boilerplate",
+      "text": "大カテゴリー"
+    },
+    {
+      "href": "https://www.domain.com/SSG_pug-postcss-js_boilerplate/feature/",
+      "text": "特集名"
+    }
+  ]
+}

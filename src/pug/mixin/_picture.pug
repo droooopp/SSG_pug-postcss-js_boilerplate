@@ -1,0 +1,34 @@
+mixin picture({fullPath=false, imgName, type, alt, className, classNameFigure, aspectRatio, spAspectRatio, pcAspectRatio, dir=`${data.gender}`})
+  figure(
+    class=aspectRatio ? "u-imgAdjustBox" : (spAspectRatio ? "u-imgAdjustBox" : false),
+    class=classNameFigure,
+    data-aspect-ratio=aspectRatio ? aspectRatio : false,
+    data-sp-aspect-ratio=spAspectRatio ? spAspectRatio : false,
+    data-pc-aspect-ratio=pcAspectRatio ? pcAspectRatio : false
+  )
+    picture(class=aspectRatio ? "u-imgAdjustBox_inner" : (spAspectRatio ? "u-imgAdjustBox_inner" : false))
+      source(
+        data-srcset=fullPath ? imgName : `${data.imgPath}${dir}/pc-${imgName}.webp`,
+        media=`(min-width: ${data.breakpoint}px)`,
+        type="image/webp"
+      )
+      source(
+        data-srcset=fullPath ? imgName : `${data.imgPath}${dir}/pc-${imgName}.${type}`,
+        media=`(min-width: ${data.breakpoint}px)`,
+        type=`image/${type === 'jpg' ? 'jpeg' : type}`
+      )
+      source(
+        data-srcset=fullPath ? imgName : `${data.imgPath}${dir}/sp-${imgName}.webp`,
+        type="image/webp"
+      )
+      source(
+        data-srcset=fullPath ? imgName : `${data.imgPath}${dir}/sp-${imgName}.${type}`,
+        type=`image/${type === 'jpg' ? 'jpeg' : type}`
+      )
+      img.fr-img.lazyload(
+        class=className,
+        src=data.lazyInitialImg,
+        data-src=fullPath ? imgName : `${data.imgPath}${dir}/sp-${imgName}.${type}`,
+        alt=alt,
+        data-expand="300"
+      )

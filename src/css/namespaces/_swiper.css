@@ -1,0 +1,67 @@
+.swiper {
+  &-parent {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &-container {
+    padding-bottom: 18px;
+  }
+
+  &-pagination-bullets {
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+  }
+
+  &-pagination-bullet {
+    margin: 0 3px;
+    opacity: 1;
+    background-color: #dadada;
+  }
+
+  &-pagination-bullet-active {
+    background-color: #1b1b1b;
+  }
+
+  &-button-prev,
+  &-button-next {
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+  }
+
+  &-button-prev {
+    left: 0;
+  }
+
+  &-button-next {
+    right: 0;
+  }
+
+  &-button-prev::after,
+  &-button-next::after {
+    background: url(/jp/ja/contents/feature/common/icons/chevron_carousel.svg) 0% /7em 2em no-repeat;
+    content: "";
+    display: block;
+    size: 40px;
+  }
+
+  &-button-next::after {
+    background-position-x: -4em;
+  }
+
+  &-button-next.swiper-button-disabled,
+  &-button-prev.swiper-button-disabled {
+    display: none;
+  }
+
+  @media screen and (--pc-viewpoint) {
+    &-container {
+      padding-bottom: 28px;
+    }
+  }
+}
